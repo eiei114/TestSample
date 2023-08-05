@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using UniRx;
+using UnityEngine;
 
 namespace Second
 {
@@ -12,7 +13,12 @@ namespace Second
         private void Awake()
         {
             _model = new TestModel();
-            _presenter = new TestPresenter(_testView, _model);
+            
+            _model.OnAsyncInitializeObservable
+                .Subscribe(model =>
+                {
+                    _presenter = new TestPresenter(_testView, model);
+                }).AddTo(this);
         }
 
         private void OnDestroy()
