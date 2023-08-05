@@ -1,0 +1,30 @@
+﻿@startuml
+'https://plantuml.com/class-diagram
+namespace First{
+class TestView
+class TestModel
+class TestPresenter
+
+TestPresenter --> TestModel
+TestPresenter --> TestView
+}
+
+namespace Second{
+class MonoBehavior
+
+class TestView
+class TestModel
+class TestPresenter
+class TestImpl
+
+TestImpl --> TestPresenter
+TestImpl --> TestView
+TestImpl --> TestModel
+
+TestPresenter -->TestModel
+TestPresenter-->TestView
+
+TestImpl --|> MonoBehavior
+TestView --|> MonoBehavior
+}
+@enduml
