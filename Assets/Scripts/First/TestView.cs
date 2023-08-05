@@ -21,7 +21,7 @@ namespace First
 
         private readonly Subject<TestEnum> _testSubject = new();
         public IObservable<TestEnum> TestEnumObservable => _testSubject;
-
+        
         #endregion
 
         private void Start()

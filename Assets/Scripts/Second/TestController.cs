@@ -2,7 +2,7 @@
 
 namespace Second
 {
-    public class TestImpl : MonoBehaviour
+    public class TestController : MonoBehaviour
     {
         private TestModel _model;
         private TestPresenter _presenter;

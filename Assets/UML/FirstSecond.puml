@@ -15,16 +15,16 @@ class MonoBehavior
 class TestView
 class TestModel
 class TestPresenter
-class TestImpl
+class TestController
 
-TestImpl --> TestPresenter
-TestImpl --> TestView
-TestImpl --> TestModel
+TestController --> TestPresenter
+TestController --> TestView
+TestController --> TestModel
 
 TestPresenter -->TestModel
 TestPresenter-->TestView
 
-TestImpl --|> MonoBehavior
+TestController --|> MonoBehavior
 TestView --|> MonoBehavior
 }
 @enduml
